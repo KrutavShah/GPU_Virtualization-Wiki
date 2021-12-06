@@ -1,0 +1,22 @@
+{
+  "name": "GPU_Virtualization-Wiki",
+  "version": "0.0.1",
+  "description": "Guide for using nvidia vGPU on consumer cards.",
+  "main": "",
+  "repository": "github:KrutavShah/GPU_Virtualization-Wiki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KrutavShah/GPU_Virtualization-Wiki/issues"
+  },
+  "homepage": "https://krutavshah.github.io/GPU_Virtualization-Wiki/",
+  "devDependencies": {
+    "markdownlint-cli": "^0.27.1",
+    "vuepress": "^1.8.2"
+  },
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build",
+    "lint": "(echo Linting... && markdownlint -c .markdownlint.json -p .markdownlintignore '**/*.md' && echo Lint passed.) || (echo Lint failed! Please review and fix errors. && exit 1)",
+    "lint-ci": "(echo Linting... && markdownlint -c .markdownlint.json -p .markdownlintignore '**/*.md' && echo Lint passed.) || ((echo Lint failed, attempting fix... && markdownlint -c .markdownlint.json -p .markdownlintignore '**/*.md' -f && echo Fix generated successfully. Please apply the following diff using git apply && git diff) || echo Fix failed! && exit 1)"
+  }
+}
