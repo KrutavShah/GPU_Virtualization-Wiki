@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: /assets/img/hero.png
 heroText: vGPU Wiki
 tagline:
 actionText: Quick Start →
