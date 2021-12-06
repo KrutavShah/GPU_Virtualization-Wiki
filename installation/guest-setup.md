@@ -49,6 +49,38 @@ args: -uuid 30820a6f-b1a5-4503-91ca-0c10ba58692b
 
 Attach the vGPU device by going to the 'Hardware' tab of the VM, selecting 'Add' and then 'PCI Device'. Under 'Device:', you will be prompted a list of connected PCI devices, from which you should select your host's graphics card. After that, a new menu 'MDev Type' should appear, where you will select the vGPU profile you want to use.
 
+## Applying Profile Overrides
+
+::: warning
+
+This section needs expansion; the information here is fairly limited for the moment. Further details are available on [vgpu_unlock-rs](../tools/vgpu-unlock-rs.md).
+
+:::
+
+In order to make the most of your vGPU devices, you will want to apply some overrides to open up more capabilities such as removing the framerate limiter or changing the maximum screen resolution.
+
+To do so, you will enter configuration into `/etc/vgpu_unlock/profile_override.toml` detailing what needs to change:
+
+```toml
+[profile.nvidia-55]
+num_displays = 1
+display_width = 1920
+display_height = 1080
+max_pixels = 2073600
+cuda_enabled = 1
+frl_enabled = 0
+```
+
+In the example above, the profile selected is `nvidia-55` (aka GRID P40-2A) and the following changes are applied:
+
+* Number of Displays: 1
+* Display Size: 1920 x 1080
+* Framebuffer Size: 2073600 (1920*1080)
+* CUDA Enabled: true
+* Framerate Limiter Enabled: false
+
+You will want to adjust the example to a) select the profile used when you created your vGPU(s) and b) match your specific needs (i.e. setting a different resolution).
+
 ## Guest VM Setup
 
 This section will be about installing drivers for vGPU devices in the guests/virtual machines that they are assigned to. Assuming you have already completed installation of a supported operating system on your virtual machine, you can proceed with the installation with the device drivers for a vGPU.

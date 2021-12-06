@@ -73,6 +73,11 @@ git clone "https://github.com/mbilker/vgpu_unlock-rs"
 cd "vgpu_unlock-rs"
 
 cargo build --release
+
+mkdir -p /etc/vgpu_unlock
+touch /etc/vgpu_unlock/profile_override.toml
+
+cp "./target/release/libvgpu_unlock_rs.so" /usr/local/lib
 ```
 
 ## Patch and Install NVIDIA Driver
@@ -113,6 +118,26 @@ rm -rf "./NVIDIA-Linux-x86_64-460.73.01-vgpu-kvm" \
    "./NVIDIA-Linux-x86_64-460.73.01-vgpu-kvm.run"
 ```
 
+## Configure system services
+
+In order to have the NVIDIA vGPU system services use the unlock, modifications must be made to their service definitions. Start by creating the directories `/usr/lib/systemd/system/nvidia-vgpud.d` and `/usr/lib/systemd/system/nvidia-vgpu-mgr.d`.
+
+Next, place a file in each of those folders named `vgpu_unlock-rs.conf` with the following contents:
+
+```systemd
+[Service]
+Environment=LD_PRELOAD=/usr/local/lib/libvgpu_unlock-rs.so
+Environment=__RM_NO_VERSION_CHECK=1
+```
+
+After doing that, run the following command to set both services to run on next boot:
+
+```sh
+systemctl enable nvidia-vgpud.service nvidia-vgpu-mgr.service
+```
+
+Before moving onto configuring the license server and/or vGPU devices for guests, reboot your system to ensure the kernel modules get loaded and services are running.
+
 ## (OPTIONAL) Install a Wrapper for `nvidia-smi`
 
 Doing this will allow the `nvidia-smi` utility to recognize supported consumer GPUs as supported for running vGPUs. This is necessary to receive valid output from `nvidia-smi vgpu` and its related sub-commands.
@@ -126,7 +151,7 @@ for a in $*
 do
   case $a in
     vgpu)
-      export LD_PRELOAD="/usr/local/src/vgpu_unlock-rs/target/release/libvgpu_unlock_rs.so"
+      export LD_PRELOAD="/usr/local/lib/libvgpu_unlock_rs.so"
       ;;
   esac
 done
