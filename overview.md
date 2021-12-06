@@ -51,7 +51,7 @@ IOMMU may be necessary for vGPU to work properly on some systems (such as those 
 
 ::: warning
 
-The currently supported vGPU host driver does not natively compile against Linux > 5.9. Patches are available for 5.10+, but may need to be manually applied depending on your installation method.
+The currently supported vGPU host driver does not natively compile against Linux > 5.11. Patches are available for some higher versions, but they may need to be manually applied depending on your installation method.
 
 :::
 
