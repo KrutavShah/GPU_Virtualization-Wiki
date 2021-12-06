@@ -29,8 +29,8 @@ jobs:
           BRANCH: gh-pages
           FOLDER: .vuepress/dist/
           CLEAN: true
-          git-config-name: "CI Bot"
-          git-config-email: "ci@invalid.invalid"
+          GIT-CONFIG-NAME: "CI Bot"
+          GIT-CONFIG-EMAIL: "ci@invalid.invalid"
   lint:
     name: Lint
     runs-on: ubuntu-latest
