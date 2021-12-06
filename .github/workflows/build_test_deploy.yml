@@ -12,15 +12,12 @@ jobs:
     steps:
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: '12'
+          node-version: '16'
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
           fetch-depth: '0'
           submodules: 'recursive'
-      - run: |
-          git config user.name "CI Bot"
-          git config user.email "ci@invalid.invalid"
       - name: Install
         run: npm install
       - name: Build
@@ -32,15 +29,13 @@ jobs:
           BRANCH: gh-pages
           FOLDER: .vuepress/dist/
           CLEAN: true
-          GIT-CONFIG-NAME: "CI Bot"
-          GIT-CONFIG-EMAIL: "ci@invalid.invalid"
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: '12'
+          node-version: '16'
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
