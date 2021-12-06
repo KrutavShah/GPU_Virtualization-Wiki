@@ -5,7 +5,7 @@ heroText: vGPU Wiki
 tagline:
 actionText: Quick Start →
 actionLink: /overview.md
-footer: Made with ❤️ for the GPU Unlocking Discord
+footer: Made by vGPU_Unlock community
 ---
 
 # What is vGPU?
