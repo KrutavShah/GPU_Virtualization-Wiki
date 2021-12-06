@@ -18,6 +18,9 @@ jobs:
         with:
           fetch-depth: '0'
           submodules: 'recursive'
+      - run: |
+          git config user.name "CI Bot"
+          git config user.email "ci@invalid.invalid"
       - name: Install
         run: npm install
       - name: Build
