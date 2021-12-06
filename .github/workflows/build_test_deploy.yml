@@ -17,7 +17,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: '0'
-          persist-credentials: false
           submodules: 'recursive'
       - name: Install
         run: npm install
@@ -30,6 +29,8 @@ jobs:
           BRANCH: gh-pages
           FOLDER: .vuepress/dist/
           CLEAN: true
+          git-config-name: "CI Bot"
+          git-config-email: "ci@invalid.invalid"
   lint:
     name: Lint
     runs-on: ubuntu-latest
