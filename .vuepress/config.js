@@ -1,6 +1,8 @@
 module.exports = {
   title: 'vGPU Wiki',
 
+  base: '/GPU_Virtualization-Wiki/',
+
   themeConfig: {
     nav: [
       { text: 'GitHub', link: 'https://github.com/KrutavShah/GPU_Virtualization-Wiki/' }
