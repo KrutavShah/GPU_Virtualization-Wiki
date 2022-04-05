@@ -156,7 +156,7 @@ do
   esac
 done
 
-exec /usr/lib/nvidia/nvidia-smi.orig $@
+exec /usr/bin/nvidia-smi $@
 ```
 
 Make that script executable:
