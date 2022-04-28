@@ -32,7 +32,7 @@ Even when IOMMU is enabled in your system's firmware, Linux must be told to enab
 * For Intel: `intel_iommu=on iommu=pt`
 * For AMD: `amd_iommu=on iommu=pt`
 
-Specific directions vary depending on the bootloader of use; for example, [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_virtualization/managing-virtual-devices_configuring-and-managing-virtualization#attaching-sr-iov-networking-devices-to-virtual-machines_managing-sr-iov-devices) are the directions for doing so with GRUB 2.
+Specific directions vary depending on the bootloader in use; for example, [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_virtualization/managing-virtual-devices_configuring-and-managing-virtualization#attaching-sr-iov-networking-devices-to-virtual-machines_managing-sr-iov-devices) are the directions for doing so with GRUB 2.
 
 ## Obtaining Drivers and Licensing
 
