@@ -23,6 +23,7 @@ module.exports = {
         title: 'Installation Guide',
         children: [
           '/installation/preparation.md',
+          '/installation/driver-customization.md',
           '/installation/host-setup.md',
           '/installation/license-server.md',
           '/installation/guest-setup.md'
@@ -38,7 +39,6 @@ module.exports = {
       {
         title: 'Tools',
         children: [
-          '/tools/merged-driver.md',
           '/tools/vgpu-unlock-rs.md',
         ]
       }

@@ -106,7 +106,7 @@ Before installing, you will need to blacklist nouveau drivers and rebuild the in
 To install the driver, simply run the included ".run" file. The installer will bring up a graphical interface in your command line that will be relatively easy to follow. Answer “yes” to the questions it presents you unless you have your own requirements.
 
 ```sh
-bash "./NVIDIA-Linux-x86_64-<version>-vgpu-kvm.run"
+bash './NVIDIA-Linux-x86_64-<version>-grid.run' --dkms
 ```
 
 From here, you can reboot the virtual machine and you should be able to use a graphics accelerated desktop environment.

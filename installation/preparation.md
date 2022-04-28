@@ -39,3 +39,35 @@ Specific directions vary depending on the bootloader in use; for example, [here]
 You can apply for a 90-day evaluation of NVIDIA vGPU on their [website](https://www.nvidia.com/en-us/data-center/resources/vgpu-evaluation/). Once you fill in the requested information, your application will be reviewed, taking anywhere from 2 minutes to 48 hours (not a guarantee). Upon approval, you will receive an email containing directions to set up an account for the NVIDIA Licensing Portal.
 
 Once you log into the Portal, you will be able to locate drivers, the licensing server and your trial licenses. You will need to download the Linux KVM vGPU drivers, which will come in the form of an archive containing drivers for both host and guest, along with documentation for installing the drivers.
+
+## Install Dependencies
+
+You will need the following packages installed:
+
+* DKMS
+* Kernel Headers
+* Rust
+* git
+* mdevctl
+* patch
+
+The installation commands vary depending on your choice of distribution.
+
+* RHEL:
+
+```sh
+dnf install "https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
+dnf --enablerepo="epel" install dkms kernel-devel mdevctl git patch rust rust-cargo
+```
+
+* Debian/Ubuntu:
+
+```sh
+apt-get install dkms linux-headers mdevctl git patch rustc cargo
+```
+
+* Arch
+
+```sh
+pacman -S dkms linux-headers mdevctl git patch rust
+```
