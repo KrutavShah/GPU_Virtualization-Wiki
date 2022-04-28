@@ -64,6 +64,7 @@ vgpu-kvm/makeself.sh --target-os $(uname -s) --target-arch $(uname -m) \
     './NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched.run' \
     'NVIDIA Accelerated Graphics Driver for Linux-x86_64 510.47.03 w/ Unlock Hooks' \
     ./nvidia-installer
+sed -i 's/targetdir=.*/targetdir=NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched/' NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched.run
 ```
 
 ## Merged Driver
@@ -160,4 +161,5 @@ merged/makeself.sh --target-os $(uname -s) --target-arch $(uname -m) \
     './NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm.run' \
     'NVIDIA Accelerated Graphics Driver for Linux-x86_64 510.47.03 (Merged) w/ Unlock Hooks' \
     ./nvidia-installer
+sed -i 's/targetdir=.*/targetdir=NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm/' NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm.run
 ```
