@@ -60,10 +60,10 @@ vgpu-kvm/nvidia-installer --dkms
 
 ``` sh
 vgpu-kvm/makeself.sh --target-os $(uname -s) --target-arch $(uname -m) \
-	"vgpu-kvm" \
-	"./NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched.run" \
-	"NVIDIA Accelerated Graphics Driver for Linux-x86_64 510.47.03 w/ Unlock Hooks" \
-	./nvidia-installer
+    'vgpu-kvm' \
+    './NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched.run' \
+    'NVIDIA Accelerated Graphics Driver for Linux-x86_64 510.47.03 w/ Unlock Hooks' \
+    ./nvidia-installer
 ```
 
 ## Merged Driver
@@ -89,37 +89,38 @@ cp -lR grid merged
 
 1. Open Meld and start a new 3-way directory comparison.
 
-![Start a new comparison](./img/merge/1_start-a-new-comparison.png)
+   ![Start a new comparison](./img/merge/1_start-a-new-comparison.png)
 
 2. Ensure you have no filters applied and change the view option to show file status: new
 
-![Select view options](./img/merge/2_select-view-options.png)
+   ![Select view options](./img/merge/2_select-view-options.png)
 
 3. Under `vgpu-kvm`, ctrl + click to select all the items listed in green. These are the files present in the vgpu-kvm driver that need to be copied into the merged driver. Then, right click and select "Copy to Right".
 
-![Copy new files](./img/merge/3_select-and-copy.png)
+   ![Copy new files](./img/merge/3_select-and-copy.png)
 
 4. Update your view options to show file status: modified
 
 5. Take the `post-install`, `pre-uninstall`, `nvidia-sources.Kbuild` and `nvidia-bug-report.sh` from `vgpu-kvm` and copy them to `merged` (as was done in step 5).
 
-::: tip Note
+   ::: tip Note
 
-This does leave out the code which installs `nvidia-gridd` and `nvidia-topologyd`, but those appear to be irrelevant on the host.
+   This does leave out the code which installs `nvidia-gridd` and `nvidia-topologyd`, but those appear to be irrelevant on the host.
 
-If that is a concern, you should manually resolve the differences within `post-install` and `pre-uninstall`.
+   If that is a concern, you should manually resolve the differences within `post-install` and `pre-uninstall`.
 
-:::
+   :::
 
 6. Manually edit `merged/conftest.sh` to add the line `VGX_KVM_BUILD=1` just above where the `GRID_BUILD` variable is assigned.
 
-![Edit conftest.sh](./img/merge/6_edit-conftest-sh.png)
+   ![Edit conftest.sh](./img/merge/6_edit-conftest-sh.png)
 
 7. Add the lines from `vgpu-kvm` into `merged/.manifest`
-- append `nvidia-vgpu-vfio` to line 4 (the list of modules to build)
-- take any lines that appear in under `vgpu-kvm/.manifest` as blue or green and copy them to `merged/.manifest` (for blue sections, you can hold ctrl and click the right arrow to get a copy menu)
 
-![Edit manifest](./img/merge/7_edit-manifest.png)
+   * append `nvidia-vgpu-vfio` to line 4 (the list of modules to build)
+   * take any lines that appear in under `vgpu-kvm/.manifest` as blue or green and copy them to `merged/.manifest` (for blue sections, you can hold ctrl and click the right arrow to get a copy menu)
+
+   ![Edit manifest](./img/merge/7_edit-manifest.png)
 
 8. Close Meld, making sure to save changes to the files which were manually edited.
 
@@ -155,8 +156,8 @@ merged/nvidia-installer --dkms
 
 ``` sh
 merged/makeself.sh --target-os $(uname -s) --target-arch $(uname -m) \
-	"merged" \
-	"./NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm.run" \
-	"NVIDIA Accelerated Graphics Driver for Linux-x86_64 510.47.03 (Merged) w/ Unlock Hooks" \
-	./nvidia-installer
+    'merged' \
+    './NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm.run' \
+    'NVIDIA Accelerated Graphics Driver for Linux-x86_64 510.47.03 (Merged) w/ Unlock Hooks' \
+    ./nvidia-installer
 ```
