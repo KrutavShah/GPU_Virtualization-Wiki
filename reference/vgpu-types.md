@@ -98,9 +98,6 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 ::: details GRID M10
 | Id | Name | Framebuffer | Display Count | Max Resolution | Max FPS | CUDA Enabled | Multiple vGPU Support |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| nvidia-155 | GRID M10-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-208 | GRID M10-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-240 | GRID M10-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-35 | GRID M10-0B | 0.5G | 2 | 2560x1600 | 45 | False | False |
 | nvidia-36 | GRID M10-0Q | 0.5G | 2 | 2560x1600 | 60 | False | False |
 | nvidia-37 | GRID M10-1A | 1G | 1 | 1280x1024 | 60 | False | False |
@@ -112,14 +109,15 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-43 | GRID M10-4Q | 4G | 4 | 5120x2880 | 60 | False | False |
 | nvidia-44 | GRID M10-8A | 8G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-45 | GRID M10-8Q | 8G | 4 | 5120x2880 | 60 | True | True |
+| nvidia-155 | GRID M10-2B | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-208 | GRID M10-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-240 | GRID M10-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 :::
 
 ::: details GRID M6
 | Id | Name | Framebuffer | Display Count | Max Resolution | Max FPS | CUDA Enabled | Multiple vGPU Support |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| nvidia-209 | GRID M6-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-23 | GRID M6-0B | 0.5G | 2 | 2560x1600 | 45 | False | False |
-| nvidia-239 | GRID M6-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-24 | GRID M6-0Q | 0.5G | 2 | 2560x1600 | 60 | False | False |
 | nvidia-25 | GRID M6-1A | 1G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-26 | GRID M6-1B | 1G | 4 | 5120x2880 | 45 | False | False |
@@ -131,6 +129,8 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-32 | GRID M6-4Q | 4G | 4 | 5120x2880 | 60 | False | False |
 | nvidia-33 | GRID M6-8A | 8G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-34 | GRID M6-8Q | 8G | 4 | 5120x2880 | 60 | True | True |
+| nvidia-209 | GRID M6-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-239 | GRID M6-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 :::
 
 ::: details GRID M60
@@ -147,20 +147,14 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-19 | GRID M60-4A | 4G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-20 | GRID M60-4Q | 4G | 4 | 5120x2880 | 60 | False | False |
 | nvidia-21 | GRID M60-8A | 8G | 1 | 1280x1024 | 60 | False | False |
-| nvidia-210 | GRID M60-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-22 | GRID M60-8Q | 8G | 4 | 5120x2880 | 60 | True | True |
-| nvidia-238 | GRID M60-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-210 | GRID M60-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-238 | GRID M60-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 :::
 
 ::: details GRID P100
 | Id | Name | Framebuffer | Display Count | Max Resolution | Max FPS | CUDA Enabled | Multiple vGPU Support |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| nvidia-160 | GRID P100-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-211 | GRID P100-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-244 | GRID P100-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-293 | GRID P100-4C | 4G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-294 | GRID P100-8C | 8G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-295 | GRID P100-16C | 16G | 1 | 4096x2160 | 60 | True | True |
 | nvidia-83 | GRID P100-1Q | 1G | 4 | 5120x2880 | 60 | True | False |
 | nvidia-84 | GRID P100-2Q | 2G | 4 | 7680x4320 | 60 | True | False |
 | nvidia-85 | GRID P100-4Q | 4G | 4 | 7680x4320 | 60 | True | False |
@@ -172,6 +166,12 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-91 | GRID P100-8A | 8G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-92 | GRID P100-16A | 16G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-93 | GRID P100-1B | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-160 | GRID P100-2B | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-211 | GRID P100-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-244 | GRID P100-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-293 | GRID P100-4C | 4G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-294 | GRID P100-8C | 8G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-295 | GRID P100-16C | 16G | 1 | 4096x2160 | 60 | True | True |
 :::
 
 ::: details GRID P100C
@@ -189,8 +189,8 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-153 | GRID P100C-12A | 12G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-154 | GRID P100C-1B | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-161 | GRID P100C-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-212 | GRID P100C-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-246 | GRID P100C-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-212 | GRID P100C-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-246 | GRID P100C-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-305 | GRID P100C-4C | 4G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-306 | GRID P100C-6C | 6G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-307 | GRID P100C-12C | 12G | 1 | 4096x2160 | 60 | True | True |
@@ -199,33 +199,28 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 ::: details GRID P100X
 | Id | Name | Framebuffer | Display Count | Max Resolution | Max FPS | CUDA Enabled | Multiple vGPU Support |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| nvidia-100 | GRID P100X-2A | 2G | 1 | 1280x1024 | 60 | False | False |
-| nvidia-101 | GRID P100X-4A | 4G | 1 | 1280x1024 | 60 | False | False |
-| nvidia-102 | GRID P100X-8A | 8G | 1 | 1280x1024 | 60 | False | False |
-| nvidia-103 | GRID P100X-16A | 16G | 1 | 1280x1024 | 60 | False | False |
-| nvidia-104 | GRID P100X-1B | 1G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-159 | GRID P100X-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-213 | GRID P100X-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-245 | GRID P100X-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-296 | GRID P100X-4C | 4G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-297 | GRID P100X-8C | 8G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-298 | GRID P100X-16C | 16G | 1 | 4096x2160 | 60 | True | True |
 | nvidia-94 | GRID P100X-1Q | 1G | 4 | 5120x2880 | 60 | True | False |
 | nvidia-95 | GRID P100X-2Q | 2G | 4 | 7680x4320 | 60 | True | False |
 | nvidia-96 | GRID P100X-4Q | 4G | 4 | 7680x4320 | 60 | True | False |
 | nvidia-97 | GRID P100X-8Q | 8G | 4 | 7680x4320 | 60 | True | False |
 | nvidia-98 | GRID P100X-16Q | 16G | 4 | 7680x4320 | 60 | True | True |
 | nvidia-99 | GRID P100X-1A | 1G | 1 | 1280x1024 | 60 | False | False |
+| nvidia-100 | GRID P100X-2A | 2G | 1 | 1280x1024 | 60 | False | False |
+| nvidia-101 | GRID P100X-4A | 4G | 1 | 1280x1024 | 60 | False | False |
+| nvidia-102 | GRID P100X-8A | 8G | 1 | 1280x1024 | 60 | False | False |
+| nvidia-103 | GRID P100X-16A | 16G | 1 | 1280x1024 | 60 | False | False |
+| nvidia-104 | GRID P100X-1B | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-159 | GRID P100X-2B | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-213 | GRID P100X-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-245 | GRID P100X-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-296 | GRID P100X-4C | 4G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-297 | GRID P100X-8C | 8G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-298 | GRID P100X-16C | 16G | 1 | 4096x2160 | 60 | True | True |
 :::
 
 ::: details GRID P4
 | Id | Name | Framebuffer | Display Count | Max Resolution | Max FPS | CUDA Enabled | Multiple vGPU Support |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| nvidia-157 | GRID P4-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-214 | GRID P4-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-243 | GRID P4-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-288 | GRID P4-4C | 4G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-289 | GRID P4-8C | 8G | 1 | 4096x2160 | 60 | True | True |
 | nvidia-63 | GRID P4-1Q | 1G | 4 | 5120x2880 | 60 | True | False |
 | nvidia-64 | GRID P4-2Q | 2G | 4 | 7680x4320 | 60 | True | False |
 | nvidia-65 | GRID P4-4Q | 4G | 4 | 7680x4320 | 60 | True | False |
@@ -235,19 +230,16 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-69 | GRID P4-4A | 4G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-70 | GRID P4-8A | 8G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-71 | GRID P4-1B | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-157 | GRID P4-2B | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-214 | GRID P4-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-243 | GRID P4-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-288 | GRID P4-4C | 4G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-289 | GRID P4-8C | 8G | 1 | 4096x2160 | 60 | True | True |
 :::
 
 ::: details GRID P40
 | Id | Name | Framebuffer | Display Count | Max Resolution | Max FPS | CUDA Enabled | Multiple vGPU Support |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| nvidia-156 | GRID P40-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-215 | GRID P40-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-241 | GRID P40-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-283 | GRID P40-4C | 4G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-284 | GRID P40-6C | 6G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-285 | GRID P40-8C | 8G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-286 | GRID P40-12C | 12G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-287 | GRID P40-24C | 24G | 1 | 4096x2160 | 60 | True | True |
 | nvidia-46 | GRID P40-1Q | 1G | 4 | 5120x2880 | 60 | True | False |
 | nvidia-47 | GRID P40-2Q | 2G | 4 | 7680x4320 | 60 | True | False |
 | nvidia-48 | GRID P40-3Q | 3G | 4 | 7680x4320 | 60 | True | False |
@@ -265,17 +257,19 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-60 | GRID P40-12A | 12G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-61 | GRID P40-24A | 24G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-62 | GRID P40-1B | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-156 | GRID P40-2B | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-215 | GRID P40-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-241 | GRID P40-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-283 | GRID P40-4C | 4G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-284 | GRID P40-6C | 6G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-285 | GRID P40-8C | 8G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-286 | GRID P40-12C | 12G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-287 | GRID P40-24C | 24G | 1 | 4096x2160 | 60 | True | True |
 :::
 
 ::: details GRID P6
 | Id | Name | Framebuffer | Display Count | Max Resolution | Max FPS | CUDA Enabled | Multiple vGPU Support |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| nvidia-158 | GRID P6-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-216 | GRID P6-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-242 | GRID P6-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-290 | GRID P6-4C | 4G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-291 | GRID P6-8C | 8G | 1 | 4096x2160 | 60 | True | False |
-| nvidia-292 | GRID P6-16C | 16G | 1 | 4096x2160 | 60 | True | True |
 | nvidia-72 | GRID P6-1Q | 1G | 4 | 5120x2880 | 60 | True | False |
 | nvidia-73 | GRID P6-2Q | 2G | 4 | 7680x4320 | 60 | True | False |
 | nvidia-74 | GRID P6-4Q | 4G | 4 | 7680x4320 | 60 | True | False |
@@ -287,6 +281,12 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-80 | GRID P6-8A | 8G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-81 | GRID P6-16A | 16G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-82 | GRID P6-1B | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-158 | GRID P6-2B | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-216 | GRID P6-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-242 | GRID P6-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-290 | GRID P6-4C | 4G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-291 | GRID P6-8C | 8G | 1 | 4096x2160 | 60 | True | False |
+| nvidia-292 | GRID P6-16C | 16G | 1 | 4096x2160 | 60 | True | True |
 :::
 
 ::: details GRID RTX6000
@@ -418,7 +418,7 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | nvidia-222 | GRID T4-1B | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-223 | GRID T4-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-224 | GRID T4-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-224 | GRID T4-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-225 | GRID T4-1A | 1G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-226 | GRID T4-2A | 2G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-227 | GRID T4-4A | 4G | 1 | 1280x1024 | 60 | False | False |
@@ -429,7 +429,7 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-232 | GRID T4-4Q | 4G | 4 | 7680x4320 | 60 | True | False |
 | nvidia-233 | GRID T4-8Q | 8G | 4 | 7680x4320 | 60 | True | False |
 | nvidia-234 | GRID T4-16Q | 16G | 4 | 7680x4320 | 60 | True | True |
-| nvidia-252 | GRID T4-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-252 | GRID T4-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-319 | GRID T4-4C | 4G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-320 | GRID T4-8C | 8G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-321 | GRID T4-16C | 16G | 1 | 4096x2160 | 60 | True | True |
@@ -450,8 +450,8 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-114 | GRID V100-16A | 16G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-115 | GRID V100-1B | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-163 | GRID V100-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-217 | GRID V100-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-247 | GRID V100-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-217 | GRID V100-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-247 | GRID V100-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-299 | GRID V100-4C | 4G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-300 | GRID V100-8C | 8G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-301 | GRID V100-16C | 16G | 1 | 4096x2160 | 60 | True | True |
@@ -474,8 +474,8 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-191 | GRID V100D-32A | 32G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-192 | GRID V100D-1B | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-193 | GRID V100D-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-218 | GRID V100D-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-249 | GRID V100D-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-218 | GRID V100D-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-249 | GRID V100D-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-311 | GRID V100D-4C | 4G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-312 | GRID V100D-8C | 8G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-313 | GRID V100D-16C | 16G | 1 | 4096x2160 | 60 | True | False |
@@ -499,8 +499,8 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-205 | GRID V100DX-32A | 32G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-206 | GRID V100DX-1B | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-207 | GRID V100DX-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-219 | GRID V100DX-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-250 | GRID V100DX-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-219 | GRID V100DX-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-250 | GRID V100DX-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-315 | GRID V100DX-4C | 4G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-316 | GRID V100DX-8C | 8G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-317 | GRID V100DX-16C | 16G | 1 | 4096x2160 | 60 | True | False |
@@ -522,8 +522,8 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-174 | GRID V100L-16A | 16G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-175 | GRID V100L-1B | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-176 | GRID V100L-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-220 | GRID V100L-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-251 | GRID V100L-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-220 | GRID V100L-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-251 | GRID V100L-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-308 | GRID V100L-4C | 4G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-309 | GRID V100L-8C | 8G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-310 | GRID V100L-16C | 16G | 1 | 4096x2160 | 60 | True | True |
@@ -567,8 +567,8 @@ The following data is taken from `vgpuConfig.xml` from a 510.47.03 driver packag
 | nvidia-125 | GRID V100X-16A | 16G | 1 | 1280x1024 | 60 | False | False |
 | nvidia-126 | GRID V100X-1B | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-162 | GRID V100X-2B | 2G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-221 | GRID V100X-2B4 | 24G | 4 | 5120x2880 | 45 | False | False |
-| nvidia-248 | GRID V100X-1B4 | 14G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-221 | GRID V100X-2B4 | 2G | 4 | 5120x2880 | 45 | False | False |
+| nvidia-248 | GRID V100X-1B4 | 1G | 4 | 5120x2880 | 45 | False | False |
 | nvidia-302 | GRID V100X-4C | 4G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-303 | GRID V100X-8C | 8G | 1 | 4096x2160 | 60 | True | False |
 | nvidia-304 | GRID V100X-16C | 16G | 1 | 4096x2160 | 60 | True | True |

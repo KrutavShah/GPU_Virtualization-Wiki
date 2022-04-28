@@ -1,4 +1,5 @@
 import json
+import re
 import xml.etree.ElementTree as ET
 
 def main():
@@ -25,7 +26,7 @@ def main():
 
     displayCount = int(element.find('numHeads').text)
     frlConfig = int(element.find('frlConfig').text, 0)
-    framebuffer = ''.join(d for d in vgpuName.split('-')[-1] if d.isdigit())
+    framebuffer = vgpuName.split('-')[-1][:re.search(r'[a-z]', vgpuName.split('-')[-1], re.I).start()]
 
     if framebuffer == '0':
       framebuffer = '0.5'
@@ -39,7 +40,7 @@ def main():
     if pgpuKey not in pgpuTypes.keys():
       pgpuTypes[pgpuKey] = {}
 
-    pgpuTypes[pgpuKey][vgpuId] = vgpuItem
+    pgpuTypes[pgpuKey][int(vgpuId)] = vgpuItem
 
   for k, v in sorted(pgpuTypes.items()):
     print(f'::: details {k}')
