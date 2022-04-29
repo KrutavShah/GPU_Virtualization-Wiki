@@ -39,13 +39,13 @@ patch vgpu-kvm/kernel/nvidia/nv-kernel.o_binary nv-kernel.patch
 git clone 'https://github.com/DualCoder/vgpu_unlock.git' vgpu_unlock
 
 cp -l vgpu_unlock/kern.ld vgpu-kvm/kernel/nvidia/kern.ld
-cp -l vgpu_unlock/vgpu_unlock_hooks.c vgpu-kvm/kernel/nvidia/vgpu_unlock_hooks.c
+cp -l vgpu_unlock/vgpu_unlock_hooks.c vgpu-kvm/kernel/common/inc/vgpu_unlock_hooks.c
 
 sed -i '$ a ldflags-y += -T $(src)/nvidia/kern.ld' vgpu-kvm/kernel/nvidia/nvidia.Kbuild
 sed -i '32 a #include "vgpu_unlock_hooks.c"' vgpu-kvm/kernel/nvidia/os-interface.c
 
-echo 'kernel/common/inc/vgpu_unlock_hooks.c 0644 KERNEL_MODULE_SRC INHERIT_PATH_DEPTH:1 MODULE:vgpu' >> vgpu-kvm/.manifest
 echo 'kernel/nvidia/kern.ld 0644 KERNEL_MODULE_SRC INHERIT_PATH_DEPTH:1 MODULE:resman' >> vgpu-kvm/.manifest
+echo 'kernel/common/inc/vgpu_unlock_hooks.c 0644 KERNEL_MODULE_SRC INHERIT_PATH_DEPTH:1 MODULE:vgpu' >> vgpu-kvm/.manifest
 ```
 
 ### Install
@@ -59,12 +59,13 @@ vgpu-kvm/nvidia-installer --dkms
 ... or you can re-pack it for ease of safe-keeping (and/or use with applications such as [libvf.io](https://libvf.io/)):
 
 ``` sh
-vgpu-kvm/makeself.sh --target-os $(uname -s) --target-arch $(uname -m) \
-    'vgpu-kvm' \
-    './NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched.run' \
+ln -s 'vgpu-kvm' 'NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched'
+merged/makeself.sh --target-os $(uname -s) --target-arch $(uname -m) \
+    'NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched' \
+    'NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched.run' \
     'NVIDIA Accelerated Graphics Driver for Linux-x86_64 510.47.03 w/ Unlock Hooks' \
     ./nvidia-installer
-sed -i 's/targetdir=.*/targetdir=NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched/' NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched.run
+unlink 'NVIDIA-Linux-x86_64-510.47.03-vgpu-kvm-patched'
 ```
 
 ## Merged Driver
@@ -138,13 +139,13 @@ patch merged/kernel/nvidia/nv-kernel.o_binary nv-kernel.patch
 git clone 'https://github.com/DualCoder/vgpu_unlock.git' vgpu_unlock
 
 cp -l vgpu_unlock/kern.ld merged/kernel/nvidia/kern.ld
-cp -l vgpu_unlock/vgpu_unlock_hooks.c merged/kernel/nvidia/vgpu_unlock_hooks.c
+cp -l vgpu_unlock/vgpu_unlock_hooks.c merged/kernel/common/inc/vgpu_unlock_hooks.c
 
 sed -i '$ a ldflags-y += -T $(src)/nvidia/kern.ld' merged/kernel/nvidia/nvidia.Kbuild
 sed -i '32 a #include "vgpu_unlock_hooks.c"' merged/kernel/nvidia/os-interface.c
 
-echo 'kernel/common/inc/vgpu_unlock_hooks.c 0644 KERNEL_MODULE_SRC INHERIT_PATH_DEPTH:1 MODULE:vgpu' >> merged/.manifest
 echo 'kernel/nvidia/kern.ld 0644 KERNEL_MODULE_SRC INHERIT_PATH_DEPTH:1 MODULE:resman' >> merged/.manifest
+echo 'kernel/common/inc/vgpu_unlock_hooks.c 0644 KERNEL_MODULE_SRC INHERIT_PATH_DEPTH:1 MODULE:vgpu' >> merged/.manifest
 ```
 
 ### Install
@@ -156,10 +157,11 @@ merged/nvidia-installer --dkms
 ```
 
 ``` sh
+ln -s 'merged' 'NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm'
 merged/makeself.sh --target-os $(uname -s) --target-arch $(uname -m) \
-    'merged' \
-    './NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm.run' \
+    'NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm' \
+    'NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm.run' \
     'NVIDIA Accelerated Graphics Driver for Linux-x86_64 510.47.03 (Merged) w/ Unlock Hooks' \
     ./nvidia-installer
-sed -i 's/targetdir=.*/targetdir=NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm/' NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm.run
+unlink 'NVIDIA-Linux-x86_64-510.47.03-grid-vgpu-kvm'
 ```
