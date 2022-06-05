@@ -36,7 +36,7 @@ The following commands create drop-in overrides for each of the services, causin
 ``` sh
 mkdir /etc/systemd/system/nvidia-{vgpu-mgr,vgpud}.service.d
 echo '[Service]
-Environment=LD_PRELOAD=/usr/local/lib/libvgpu_unlock-rs.so' | tee /etc/systemd/system/nvidia-{vgpu-mgr,vgpud}.service.d/vgpu_unlock-rs.conf > /dev/null
+Environment=LD_PRELOAD=/usr/local/lib/libvgpu_unlock_rs.so' | tee /etc/systemd/system/nvidia-{vgpu-mgr,vgpud}.service.d/vgpu_unlock-rs.conf > /dev/null
 ```
 
 After doing that, run the following command to set both services to run on next boot:
